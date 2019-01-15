@@ -1,12 +1,8 @@
 # Install/Update/Validate Jenkins Install on Ubuntu 16.04
 
 ### Run Now (Live Dangerously)
- curl https://raw.githubusercontent.com/thecrazyrussian/install-jenkins-xenial/master/install.sh | sudo bash -
+ sudo curl https://raw.githubusercontent.com/thecrazyrussian/install-jenkins-xenial/master/install.sh | bash -
  
-### Run Manually (Download and Run)
- curl https://raw.githubusercontent.com/thecrazyrussian/install-jenkins-xenial/master/install.sh
- sudo ./install.sh
-
 ### Run Automatically (Automated - Keep things in compliance)
  curl https://raw.githubusercontent.com/thecrazyrussian/install-jenkins-xenial/master/install.sh
  sudo mv install-jenkins-xenial/install.sh /etc/cron.hourly/jenkins
