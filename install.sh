@@ -8,16 +8,16 @@ javainstalled=true
 jrestart=false
 
 #jenkins install check
-jenkinsins=`apt list --installed jenkins`
-if [[ $jenkinsins == *'jenkins'* ]]; then
+jenkinsins=`dpkg-query -W -f='${Status}' jenkins`
+if [[ $jenkinsins == *'ok installed'* ]]; then
   echo "Jenkins is installed!"
 else
   jinstalled=false
 fi
 
 #java install check
-javains=`apt list --installed default-jre`
-if [[ $javains == *'default-jre'* ]]; then
+javains=`dpkg-query -W -f='${Status}' default-jre`
+if [[ $javains == *'ok installed'* ]]; then
   echo "java is installed!"
 else
   javainstalled=false
